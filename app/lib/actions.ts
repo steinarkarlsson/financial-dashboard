@@ -12,7 +12,7 @@ const FormSchema = z.object({
     customerId: z.string({
         invalid_type_error: 'Please select a customer.',
     }),
-    amount: z.coerce.number,
+    amount: z.coerce.number(),
     status: z.enum(['pending', 'paid'], {invalid_type_error: 'Please select an invoice status.'}),
     date: z.string(),
 });
